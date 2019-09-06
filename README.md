@@ -1,1 +1,1 @@
-# SmartMirror_ver.3-use.pyqt5
+# SmartMirror_v3

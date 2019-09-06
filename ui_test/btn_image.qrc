@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="button">
+    <file>facebook.jpg</file>
+    <file>kakao.jpg</file>
+  </qresource>
+</RCC>
