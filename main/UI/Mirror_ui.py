@@ -44,17 +44,21 @@ class Ui_MainWindow(object):
         self.label_2.setObjectName("label_2")
         self.widget_Calendar = QtWidgets.QWidget(self.centralwidget)
         self.widget_List.append(self.widget_Calendar)
-        self.widget_Calendar.setGeometry(QtCore.QRect(2, 164, 500, 300))
+
+        self.widget_Calendar.setGeometry(QtCore.QRect(2, 164, 600, 450))
         self.widget_Calendar.setStyleSheet("background-color: rgb(198, 198, 198);")
         self.widget_Calendar.setObjectName("widget_Calendar")
+
         self.widget_youtube = QtWidgets.QWidget(self.centralwidget)
         self.widget_List.append(self.widget_youtube)
-        self.widget_youtube.setGeometry(QtCore.QRect(2, 464, 500, 300))
+
+        self.widget_youtube.setGeometry(QtCore.QRect(2, 614, 500, 300))
         self.widget_youtube.setStyleSheet("background-color: rgb(84, 84, 84);")
         self.widget_youtube.setObjectName("widget_youtube")
+
         self.widget_notification = QtWidgets.QWidget(self.centralwidget)
         self.widget_List.append(self.widget_notification)
-        self.widget_notification.setGeometry(QtCore.QRect(2, 764, 500, 300))
+        self.widget_notification.setGeometry(QtCore.QRect(2, 914, 500, 300))
         self.widget_notification.setStyleSheet("background-color: rgb(35, 35, 35);")
         self.widget_notification.setObjectName("widget_notification")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)

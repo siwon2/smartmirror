@@ -61,7 +61,7 @@ class Ui_Form(object):
         self.label_4.setObjectName("label_4")
         self.widget_List.append(self.label_4)
         self.label_5 = QtWidgets.QLabel(Form)
-        self.label_5.setGeometry(QtCore.QRect(320, 100, 220, 40))
+        self.label_5.setGeometry(QtCore.QRect(320, 100, 220, 400))
         font = QtGui.QFont()
         font.setFamily("Arial")
         font.setPointSize(16)
@@ -70,6 +70,7 @@ class Ui_Form(object):
         self.label_5.setFont(font)
         self.label_5.setStyleSheet("color: rgb(255, 255, 255);")
         self.label_5.setObjectName("label_5")
+        self.label_5.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.widget_List.append(self.label_5)
 
         self.retranslateUi(Form)

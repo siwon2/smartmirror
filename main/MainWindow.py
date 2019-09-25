@@ -26,9 +26,9 @@ class Window(QtWidgets.QMainWindow):
         self.signal_notification_display.connect(Ui_List[3].displayNoti)
         self.signal_notification_remove.connect(Ui_List[3].removeNoti)
 
-        self.signal_calendar_addCalendar.connect(Ui_List[4].addCalendar)
-        self.signal_calendar_display.connect(Ui_List[4].displayCalendar)
-        self.signal_calendar_reset.connect(Ui_List[4].resetCalendar)
+        # self.signal_calendar_addCalendar.connect(Ui_List[4].addCalendar)
+        # self.signal_calendar_display.connect(Ui_List[4].displayCalendar)
+        # self.signal_calendar_reset.connect(Ui_List[4].resetCalendar)
 
         self.signal_youtube_setURL.connect(Ui_List[5].setVidUrl)
         self.signal_addSchedule.connect(Ui_List[6].setSchedule)
