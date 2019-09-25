@@ -1,9 +1,14 @@
-import Map
-import math
+from selenium import webdriver
 
+from selenium.webdriver.chrome.options import *
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.common.keys import Keys
+from time import sleep
 
-def search(start, dest):
-    opt = Options()
+def Naver_map_way(start_point,end_point):
+    opt =Options()
     opt.add_argument("--headless") 
     
     opt.add_experimental_option("prefs",
@@ -26,11 +31,11 @@ def search(start, dest):
     b=driver.find_elements_by_class_name("pf_tab_public")[0]
     b.find_elements_by_xpath(".//*")[0].click()
 
-    driver.find_elements_by_class_name('input_act')[1].send_keys(start)
+    driver.find_elements_by_class_name('input_act')[1].send_keys(start_point)
     driver.find_elements_by_class_name('input_act')[1].send_keys(Keys.ENTER)
 
     sleep(0.2)
-    driver.find_elements_by_class_name('input_act')[2].send_keys(dest)
+    driver.find_elements_by_class_name('input_act')[2].send_keys(end_point)
     driver.find_elements_by_class_name('input_act')[2].send_keys(Keys.ENTER)
     sleep(0.2)
 
@@ -51,13 +56,9 @@ def search(start, dest):
     time = driver.execute_script("return arguments[0].textContent", time_element)
 
     way=way.replace("  ","")
+    return time,way
 
-    distance = ""
 
-    for i in range(0,len(way[1])):
-        if  "→" in way[1][i]:
-            distance += '\n'
-        else :    
-            distance += way[1][i]
-
-    return time,distance
+way_map=Naver_map_way("대구소프트웨어고등학교","서울시청")
+print("시간 + 요금 : "+way_map[0])
+print("경로 : "+way_map[1])

@@ -23,12 +23,6 @@ class window(QtWidgets.QWidget):
         
     @pyqtSlot(str)
     def setVidUrl(self, url):
-        self.vidUrl = url
+        self.vidUrl = url+"?autoplay=1"
         print('url:',url)
         self.webview.setUrl(QUrl(self.vidUrl))
-        time.sleep(5)
-        mouse.mouse_move()
-        
-        
-
-
