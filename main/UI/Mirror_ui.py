@@ -58,7 +58,7 @@ class Ui_MainWindow(object):
 
         self.widget_notification = QtWidgets.QWidget(self.centralwidget)
         self.widget_List.append(self.widget_notification)
-        self.widget_notification.setGeometry(QtCore.QRect(2, 914, 500, 300))
+        self.widget_notification.setGeometry(QtCore.QRect(710, 5, 500, 300))
         self.widget_notification.setStyleSheet("background-color: rgb(35, 35, 35);")
         self.widget_notification.setObjectName("widget_notification")
         self.label_3 = QtWidgets.QLabel(self.centralwidget)

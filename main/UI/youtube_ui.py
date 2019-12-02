@@ -3,7 +3,6 @@ import sys, time
 from PyQt5.QtCore import Qt,QUrl, pyqtSlot
 from PyQt5 import QtWebKitWidgets
 from PyQt5.QtWebKit import QWebSettings
-import mouse
 
 class window(QtWidgets.QWidget):
     vidUrl = "https://www.youtube.com/embed/Mq4AbdNsFVw"

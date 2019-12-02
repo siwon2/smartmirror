@@ -1,7 +1,7 @@
 import forecastio
 import os
 
-api_key = "darksky_api_key"
+api_key = "6f2c1ebb5489c688baa2d4de29410089"
 
 icons = {"bolt" : "weather_icons" + os.sep + "bolt.png",
          "clouds" : "weather_icons" + os.sep + "clouds.png",

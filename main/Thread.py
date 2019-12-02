@@ -111,7 +111,7 @@ class Listener(QtCore.QThread):
                         
                         print('도착지:',place_to)
 
-                        duration, distance, start, dest = route.search(place_from, place_to)
+                        duration, distance = route.search(place_from, place_to)
                         self.Ui_List[2].widget_List[0].setText(place_from)
                         self.Ui_List[2].widget_List[1].setText(place_to)
                         self.Ui_List[2].widget_List[2].setText(">")

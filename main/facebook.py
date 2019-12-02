@@ -14,7 +14,7 @@ from PyQt5 import QtCore
 
 class FaceBook(QtCore.QObject):
     isRunning = False
-    def __init__(self,visible=False,email="facebook_id",password="facebook_password", signal=None):
+    def __init__(self,visible=False,email="001anyang@gmail.com",password="qwer!@#$", signal=None):
         opt =Options()
         
         if not visible:
@@ -49,10 +49,18 @@ class FaceBook(QtCore.QObject):
     def login(self):
         self.driver.get("https://www.facebook.com")
 
+        WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.ID,\
+                     "email"))
+                )
+
         self.driver.find_element_by_id("email").send_keys(self.email)
         self.driver.find_element_by_id("pass").send_keys(self.password)
         self.driver.find_element_by_id("loginbutton").click()
-        self.msg_btn = self.driver.find_element_by_name("mercurymessages")
+        self.msg_btn = WebDriverWait(self.driver, 10).until(
+                    EC.presence_of_element_located((By.NAME,\
+                     "mercurymessages"))
+                )
 
     def receive_new_msgs(self):
         while self.isRunning:
@@ -194,7 +202,7 @@ def handler(dicts, signal):
         #print('시간 :',d['time'])
 
 if __name__ == '__main__':
-    f=FaceBook()
+    f=FaceBook(True)
     f.login()
     f.register_handler(handler)
     while True:

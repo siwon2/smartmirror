@@ -188,7 +188,7 @@ font-weight: bold;
 
 class Searcher():
     def __init__(self):
-        self.api = yapi.YoutubeAPI('Youtube_data_api_v3_key')
+        self.api = yapi.YoutubeAPI('AIzaSyCzthYfSnRAsubOsPKyhDzYeEmn2iKjK5w')
 
     def search(self, name, resultCount=5):
         results = self.api.general_search(name, max_results=resultCount)

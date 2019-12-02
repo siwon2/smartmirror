@@ -4,8 +4,8 @@ from urllib import request
 from urllib import parse
 
 
-bingMapsKey = "User_bingMaps_Key"
-GoogleMapKey = "User_GoogleMap_Key"
+bingMapsKey = "AngatRrU3dqVA9KgVL2dR3dKFK0DEj1XsnQ9DbWmTndk0UnwoL054syEQRR5I6VQ"
+GoogleMapKey = "AIzaSyBbKYKniiu1TRXPCqTXlg32V2wbc19VN3o"
 
 # google places api를 이용 address로 받아온 query를 검색해 data를 받아온뒤 dictionary 형태로 리턴
 def getPlaceData(address):

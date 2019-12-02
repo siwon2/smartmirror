@@ -1,1 +1,0 @@
-# SmartMirror_v3
